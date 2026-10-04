@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Verification</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0d1117;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px 24px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(46, 160, 67, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .icon-box svg {
+            width: 32px;
+            height: 32px;
+            fill: #3fb950;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: #238636;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #2ea043;
+        }
+        .timer {
+            margin-top: 16px;
+            font-size: 12px;
+            color: #6e7681;
+        }
+        .timer span {
+            color: #f85149;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon-box">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+        </div>
+        <h1>Security Check Required</h1>
+        <p>Please click the button below to verify that you are human and proceed to your link.</p>
+        
+        <!-- YAHAN APNA ADSTERRA DIRECT LINK LAGAYEN -->
+        <a href="https://pimplehardnesscarnivorous.com/upfpq9xy?key=5b9b5f74d8ae8e1a2003dbaf8f9c7118" class="btn" id="verifyBtn">
+            VERIFY YOU ARE HUMAN
+        </a>
+
+        <div class="timer">Session expires in <span id="countdown">15</span> seconds</div>
+    </div>
+
+    <script>
+        // 1. Fast Countdown Timer
+        let seconds = 15;
+        const countdownEl = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            seconds--;
+            countdownEl.textContent = seconds;
+            if (seconds <= 0) {
+                seconds = 15; // Reset loop
+            }
+        }, 1000);
+
+        // 2. Direct Redirection Fix (Zero Popup Lockout)
+        document.getElementById('verifyBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const destination = this.getAttribute('href');
+            window.location.href = destination;
+        });
+    </script>
+
+</body>
+</html>
