@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Verification</title>
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+    <title>Human Verification Required</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,8 +12,8 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #0d1117;
-            color: #ffffff;
+            background-color: #0f172a;
+            color: #f8fafc;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,107 +21,100 @@
             padding: 20px;
         }
         .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 30px 24px;
-            max-width: 400px;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 30px 20px;
+            max-width: 420px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
         }
-        .icon-box {
+        .icon {
             width: 60px;
             height: 60px;
-            background: rgba(46, 160, 67, 0.15);
+            background-color: #2563eb;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
         }
-        .icon-box svg {
+        .icon svg {
             width: 32px;
             height: 32px;
-            fill: #3fb950;
+            fill: #ffffff;
         }
-        h1 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 10px;
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
         }
         p {
             font-size: 14px;
-            color: #8b949e;
-            margin-bottom: 24px;
+            color: #94a3b8;
             line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        .instructions {
+            background-color: #0f172a;
+            border-left: 4px solid #2563eb;
+            padding: 12px 15px;
+            border-radius: 6px;
+            text-align: left;
+            font-size: 13px;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+            line-height: 1.4;
         }
         .btn {
             display: block;
             width: 100%;
             padding: 16px;
-            background-color: #238636;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: #ffffff;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            transition: background 0.2s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            transition: transform 0.2s, background 0.2s;
         }
-        .btn:hover {
-            background-color: #2ea043;
+        .btn:active {
+            transform: scale(0.98);
         }
-        .timer {
-            margin-top: 16px;
-            font-size: 12px;
-            color: #6e7681;
-        }
-        .timer span {
-            color: #f85149;
-            font-weight: bold;
+        .footer-note {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 18px;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="icon-box">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-            </svg>
-        </div>
-        <h1>Security Check Required</h1>
-        <p>Please click the button below to verify that you are human and proceed to your link.</p>
-        
-        <!-- YAHAN APNA ADSTERRA DIRECT LINK LAGAYEN -->
-        <a href="https://pimplehardnesscarnivorous.com/upfpq9xy?key=5b9b5f74d8ae8e1a2003dbaf8f9c7118" class="btn" id="verifyBtn">
-            VERIFY YOU ARE HUMAN
-        </a>
-
-        <div class="timer">Session expires in <span id="countdown">15</span> seconds</div>
+<div class="card">
+    <div class="icon">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+        </svg>
+    </div>
+    
+    <h2>Human Verification Required</h2>
+    <p>Complete a quick action to verify you are not a bot and unlock your file instantly.</p>
+    
+    <div class="instructions">
+        <strong>How to Unlock:</strong><br>
+        1. Click the button below.<br>
+        2. Tap the top sponsored link (e.g. WhiteBIT/Crypto).<br>
+        3. Stay on the page for 5 seconds to complete.
     </div>
 
-    <script>
-        // 1. Fast Countdown Timer
-        let seconds = 15;
-        const countdownEl = document.getElementById('countdown');
-        const timer = setInterval(() => {
-            seconds--;
-            countdownEl.textContent = seconds;
-            if (seconds <= 0) {
-                seconds = 15; // Reset loop
-            }
-        }, 1000);
+    <a href="YOUR_CPA_LEAD_LINK_LOCKER_URL" class="btn">VERIFY & UNLOCK NOW</a>
 
-        // 2. Direct Redirection Fix (Zero Popup Lockout)
-        document.getElementById('verifyBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            const destination = this.getAttribute('href');
-            window.location.href = destination;
-        });
-    </script>
+    <div class="footer-note">⚡ Fast 5-Second Automated Verification (Pakistan Server)</div>
+</div>
 
 </body>
 </html>
